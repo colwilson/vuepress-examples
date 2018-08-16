@@ -1,6 +1,9 @@
 module.exports = {
   title: "VuePress Examples",
   description: "no need for a description really",
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   ga: "UA-20931749-8",
   themeConfig: {
     lastUpdated: false,
