@@ -1,0 +1,11 @@
+{
+  "name": "vuepress-examples",
+  "scripts": {
+    "start": "vuepress dev",
+    "publish": "vuepress build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vuepress": "^0.14.1"
+  }
+}
