@@ -9,12 +9,11 @@ module.exports = {
       "/demos/local/",
       "/demos/remote/",
       "/demos/remote-async/",
-      ["/demos/homepage/", "A Home Fit for Heroes"],
-      // "/demos/myself/"
+      ["/demos/homepage/", "A Homepage Fit for Heroes"],
+      "/demos/netlify/"
     ],
     nav: [
       { text: "Home", link: "/" }
-      //   { text: 'Demos', link: '/demos/' }
     ],
     repo: "colwilson/vuepress-examples",
     repoLabel: "Contribute an Example !",
