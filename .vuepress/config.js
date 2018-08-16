@@ -21,11 +21,11 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  configureWebpack: {
-    module: {
-      rules: [
-        { test: /\.md$/, use: './loader' }
-      ]
-    }
-  }
+  // configureWebpack: {
+  //   module: {
+  //     rules: [
+  //       { test: /\.md$/, use: './loader' }
+  //     ]
+  //   }
+  // }
 };

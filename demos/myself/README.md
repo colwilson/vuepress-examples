@@ -1,8 +1,5 @@
 # Myself
 
-
-## Demo
-
 <div>{{items}}</div>
 
 

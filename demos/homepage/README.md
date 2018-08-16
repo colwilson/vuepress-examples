@@ -6,7 +6,6 @@ actionLink: /
 
 footer: Copyright © Xooooooooooom - 2018
 ---
-## Demo Code
 ```yaml
 ---
 home: true
