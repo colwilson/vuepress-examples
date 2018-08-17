@@ -6,7 +6,7 @@ The reason you need a server is that browsers aren't allowed to access low level
 
 First, let's install some dependencies:
 
-```sh
+```bash
 > npm i express socket.io vue-socket.io
 ```
 
@@ -39,7 +39,7 @@ http.listen(9999, () => {
 
 If you save that to __server.js__ then you can run it:
 
-```sh
+```bash
 > node server
 listening on *:9999
 ```
