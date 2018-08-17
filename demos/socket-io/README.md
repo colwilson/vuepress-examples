@@ -127,5 +127,5 @@ export default {
 }
 </script>
 
-If you clone this repo the __server.js__ is actually in the root path. If you start it up and run this app you can test it out. Try opening another browser at the same url as this page and they will both update when you click the button!
+If you [clone this repo](https://github.com/colwilson/vuepress-examples) the __server.js__ is actually in the root path. If you start it up and run this app you can test it out. Try opening another browser at the same url as this page and they will both update when you click the button!
 
