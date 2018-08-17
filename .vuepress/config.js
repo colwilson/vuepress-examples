@@ -12,8 +12,9 @@ module.exports = {
       "/demos/local/",
       "/demos/remote/",
       "/demos/remote-async/",
+      "/demos/socket-io/",
       ["/demos/homepage/", "A Homepage Fit for Heroes"],
-      "/demos/netlify/"
+      "/demos/netlify/",
     ],
     nav: [
       { text: "Home", link: "/" }
@@ -22,9 +23,9 @@ module.exports = {
     repoLabel: "Contribute an Example !",
     displayAllHeaders: true
   },
-  markdown: {
-    lineNumbers: true
-  },
+  // markdown: {
+  //   lineNumbers: true
+  // },
   // configureWebpack: {
   //   module: {
   //     rules: [

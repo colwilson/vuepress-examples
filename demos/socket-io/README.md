@@ -1,50 +1,89 @@
-# Rendering Local JSON Data
+# Sharing Information with Socket.io
 
-Use import to grab local json data and render it's contents.
+[Socket.io](https://socket.io/) is an implementation of websockets which you can use to send and broadcast information to other servers via a server.
 
-```js
-<button v-on:click="clickButton()">Send</button>
-<div v-for="i in items">
-    <h2>{{i.first_name}} {{i.last_name}}</h2>
-    <img :src="i.avatar"/>
-</div>
+The reason you need a server is that browsers aren't allowed to access low level functionality that they would need to run.
 
-<script>
-import data from './data.json'
-export default {
-  data () {
-      return {
-          items: data.data
-      }
-  },
+First, let's install some dependencies:
 
-}
-</script>
+```sh
+> npm i express socket.io vue-socket.io
 ```
 
-<div v-for="i in items">
-    <button v-on:click="clickButton()">Send</button>
-    <h2>{{i.first_name}} {{i.last_name}}</h2>
-    <img :src="i.avatar"/>
+You don't need a very complicated server. Here's the simplest one I could come up with:
+
+```js
+// server.js
+
+const app = require('express')();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
+let clicks = 0
+
+io.on('connection', socket => {
+  console.log('someone connected');
+  io.emit('clicks', { count: clicks });
+  socket.on('button_clicked', msg => {
+    console.log('message:', msg);
+    clicks += 1
+    console.log('incrementing clicks to', clicks);
+    io.emit('clicks', { count: clicks });
+  })
+});
+
+http.listen(9999, () => {
+  console.log('listening on *:9999');
+});
+```
+
+If you save that to __server.js__ then you can run it:
+
+```sh
+> node server
+listening on *:9999
+```
+
+Now let's get vuepress to use vue-socket.io. Create an [enhancedApp.js file in ./vuepress](https://vuepress.vuejs.org/guide/custom-themes.html#app-level-enhancements):
+
+```js
+// enhancedApp.js
+
+import VueSocketio from 'vue-socket.io';
+
+export default ({
+    Vue, // the version of Vue being used in the VuePress app
+    options, // the options for the root Vue instance
+    router, // the router instance for the app
+    siteData // site metadata
+}) => {
+    Vue.use(VueSocketio, 'http://localhost:9999');
+}
+```
+
+Next, create a simple README.md file that looks like this:
+
+```js
+<div>
+  <button v-on:click="clickButton()">Click Me!</button>
+  <span>Clicks: {{clicks}}</span>
 </div>
 
 <script>
-import data from './data.json'
 export default {
   data () {
       return {
-          items: data.data
+        clicks: 0
       }
-  },
-  created() {
-    this.$options.sockets.onmessage = (data) => console.log(data)
   },
   sockets:{
     connect() {
       console.log('socket connected')
     },
-    messages(msg) {
+    clicks(msg) {
       console.log('received:', msg)
+      this.clicks = msg.count
+      console.log('click count', this.clicks)
     }
   },
   methods: {
@@ -54,4 +93,39 @@ export default {
   }
 }
 </script>
+```
+
+When it renders it should look like this:
+
+<div>
+  <button v-on:click="clickButton()">Click Me!</button>
+  <span>Clicks: {{clicks}}</span>
+</div>
+
+<script>
+export default {
+  data () {
+      return {
+        clicks: 0
+      }
+  },
+  sockets:{
+    connect() {
+      console.log('socket connected')
+    },
+    clicks(msg) {
+      console.log('received:', msg)
+      this.clicks = msg.count
+      console.log('click count', this.clicks)
+    }
+  },
+  methods: {
+    clickButton() {
+        this.$socket.emit('button_clicked', 'someone clicked a button');
+    }
+  }
+}
+</script>
+
+If you clone this repo the __server.js__ is actually in the root path. If you start it up and run this app you can test it out. Try opening another browser at the same url as this page and they will both update when you click the button!
 
