@@ -6,6 +6,8 @@ export default ({
     router, // the router instance for the app
     siteData // site metadata
 }) => {
-    Vue.use(VueSocketio, 'http://localhost:9999');
+    if (process.browser) {
+        Vue.use(VueSocketio, 'http://localhost:9999');
+    }
 }
 
