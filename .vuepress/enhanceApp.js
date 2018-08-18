@@ -6,7 +6,7 @@ export default ({
     router, // the router instance for the app
     siteData // site metadata
 }) => {
-    if (process.browser) {
+    if (typeof process === 'undefined') { // process is undefined in a browser 
         Vue.use(VueSocketio, 'http://localhost:9999');
     }
 }
