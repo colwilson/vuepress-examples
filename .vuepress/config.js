@@ -15,6 +15,7 @@ module.exports = {
       "/demos/socket-io/",
       ["/demos/homepage/", "A Homepage Fit for Heroes"],
       "/demos/netlify/",
+      "/demos/partials/",
     ],
     nav: [
       { text: "Home", link: "/" }
