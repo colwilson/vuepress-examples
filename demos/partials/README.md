@@ -63,7 +63,7 @@ export default {
 </style>
 ```
 
-Youn insert a component in the markdown like this:
+You insert a component in the markdown like this:
 
 ```vue
 <template>
@@ -80,6 +80,7 @@ export default {
 </script>
 
 ```
+Vue components can be as simple as a text block that you want to reuse, or they can be much more complex. However, if they start to get really complex then perhaps it's time to just start using the [Vue Framework](https://vuejs.org) itself.
 
 <style scoped>
 .version {
