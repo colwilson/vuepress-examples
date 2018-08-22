@@ -22,10 +22,10 @@ wsServer.on('request', request => {
   console.log('someone connected');
   connection.on('message', msg => {
     if (msg.type === 'utf8') {
-      console.log('message:', msg.utf8Data);
+      const o = JSON.parse(msg.utf8Data)
       clicks += 1
       console.log('incrementing clicks to', clicks);
-      connection.sendUTF(clicks);
+      connection.sendUTF(JSON.stringify({clicks}));
     }
   });
 

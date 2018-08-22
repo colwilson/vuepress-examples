@@ -9,6 +9,7 @@ export default ({
 }) => {
     if (typeof process === 'undefined') { // process is undefined in a browser 
         Vue.use(VueNativeSock, 'ws://localhost:9998', { 
+            format: 'json',
             reconnection: true,
             reconnectionAttempts: 5000,
             reconnectionDelay: 300

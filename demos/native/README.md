@@ -15,7 +15,40 @@ You don't need a very complicated server. Here's the simplest one I could come u
 ```js
 // native.js
 
-xxxxxxxxxxxxxxxxxxxxxxxxxx
+const WebSocketServer = require('websocket').server;
+const http = require('http');
+
+let clicks = 0
+
+const server = http.createServer((request, response) => {
+  // process HTTP request. Since we're writing just WebSockets
+  // server we don't have to implement anything.
+});
+server.listen(9998, () => {
+  console.log('listening on *:9998');
+});
+
+// create the server
+let wsServer = new WebSocketServer({
+  httpServer: server
+});
+
+// WebSocket server
+wsServer.on('request', request => {
+  let connection = request.accept(null, request.origin);
+  console.log('someone connected');
+  connection.on('message', msg => {
+    if (msg.type === 'utf8') {
+      const o = JSON.parse(msg.utf8Data)
+      clicks += 1
+      console.log('incrementing clicks to', clicks);
+      connection.sendUTF(JSON.stringify({clicks}));
+    }
+  });
+
+  connection.on('close', connection => {
+  });
+});
 ```
 
 If you save that to __socket.js__ then you can run it:
@@ -30,13 +63,54 @@ Now let's get vuepress to use vue-socket.io. Create an [enhancedApp.js file in .
 ```js
 // enhancedApp.js
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+import VueNativeSock from 'vue-native-websocket'
+
+export default ({
+    Vue, // the version of Vue being used in the VuePress app
+    options, // the options for the root Vue instance
+    router, // the router instance for the app
+    siteData // site metadata
+}) => {
+    if (typeof process === 'undefined') { // process is undefined in a browser 
+        Vue.use(VueNativeSock, 'ws://localhost:9998', { 
+            format: 'json',
+            reconnection: true,
+            reconnectionAttempts: 5000,
+            reconnectionDelay: 300
+         });
+    }
+}
 ```
 
 Next, create a simple README.md file that looks like this:
 
 ```js
-xxxxxxxxxxxxxxxxxxxxxxxxxxx
+<div>
+  <button v-on:click="clickButton()">Click Me!</button>
+  <span>Clicks: {{clicks}}</span>
+</div>
+
+<script>
+export default {
+  data () {
+      return {
+        clicks: 0
+      }
+  },
+  methods: {
+    clickButton() {
+      this.$socket.sendObj({text: 'someone clicked a button'})
+    }
+  },
+  beforeMount() {
+    this.$options.sockets.onmessage = (msg) => {
+      let o = JSON.parse(msg.data)
+      this.clicks = o.clicks
+      console.log('click count', this.clicks)
+    }
+  }
+}
+</script>
 ```
 
 When it renders it should look like this:
@@ -53,25 +127,15 @@ export default {
         clicks: 0
       }
   },
-  sockets:{
-    connect() {
-      console.log('socket connected')
-    },
-    clicks(msg) {
-      console.log('received:', msg)
-      this.clicks = msg.count
-      console.log('click count', this.clicks)
-    }
-  },
   methods: {
     clickButton() {
-      this.$socket.send('clicks', 'someone clicked a button');
+      this.$socket.sendObj({text: 'someone clicked a button'})
     }
   },
   beforeMount() {
     this.$options.sockets.onmessage = (msg) => {
-      console.log('received:', msg)
-      this.clicks = msg.data
+      let o = JSON.parse(msg.data)
+      this.clicks = o.clicks
       console.log('click count', this.clicks)
     }
   }
