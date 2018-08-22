@@ -23,7 +23,7 @@ The _Version_ component's code looks like this:
 <template>
   <small id='version'>
     Using vuepress version {{loc.version}}
-    <span v-if="upToDate > 0">✅</span>
+    <span v-if="upToDate >= 0">✅</span>
     <span v-else>⚠️</span>
     , latest version is {{raw.version}}
   </small>
