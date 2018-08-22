@@ -1,13 +1,13 @@
 # Sharing Information with Native WebSockets
 
-[Socket.io](https://socket.io/) is an implementation of websockets which you can use to send and broadcast information to other servers via a server.
+[Native WebSockets](https://caniuse.com/#feat=websockets) brings websockets without the need to use extension libraries such as socket.io. WebSockets allow you to  send and broadcast information to other clients/apps via a server.
 
-The reason you need a server is that browsers aren't allowed to access low level functionality that they would need to run.
+The reason you need a server is that browsers aren't allowed to access the low the level functionality that they would need to act like a server.
 
 First, let's install some dependencies:
 
 ```bash
-> npm install vue-native-websocket
+> npm install vue-native-websocket websocket
 ```
 
 You don't need a very complicated server. Here's the simplest one I could come up with:
@@ -51,14 +51,16 @@ wsServer.on('request', request => {
 });
 ```
 
-If you save that to __socket.js__ then you can run it:
+If you save that to __native.js__ then you can run it:
 
 ```bash
 > node native
 listening on *:9998
 ```
 
-Now let's get vuepress to use vue-socket.io. Create an [enhancedApp.js file in ./vuepress](https://vuepress.vuejs.org/guide/custom-themes.html#app-level-enhancements):
+Now let's get vuepress to use [vue-native-websocket](https://github.com/nathantsoi/vue-native-websocket). 
+
+Create an [enhancedApp.js file in ./vuepress](https://vuepress.vuejs.org/guide/custom-themes.html#app-level-enhancements):
 
 ```js
 // enhancedApp.js
@@ -142,5 +144,24 @@ export default {
 }
 </script>
 
-If you [clone this repo](https://github.com/colwilson/vuepress-examples) the __server.js__ is actually in the root path. If you start it up and run this app you can test it out. Try opening another browser at the same url as this page and they will both update when you click the button!
+If you [clone this repo](https://github.com/colwilson/vuepress-examples) the _native.js_ is actually in the root path. Follow these instructios to try it out. 
 
+In a console:
+```sh
+# to start the websockets backend server
+node native
+```
+and in another console:
+
+```sh
+# to start the development server
+npm start
+```
+
+[Open a browser window](http://localhost:8080/demos/native/) and click the button.
+
+Try opening [another window](http://localhost:8080/demos/native/) and watch them both update when you click the button!
+
+::: tip
+Note that this app won't work on the hosted website as I don't have the backend server _native.js_ running. You will have to download the repo and try it on your own machine as per the ionstructions above.
+:::

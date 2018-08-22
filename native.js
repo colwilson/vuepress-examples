@@ -20,6 +20,7 @@ let wsServer = new WebSocketServer({
 wsServer.on('request', request => {
   let connection = request.accept(null, request.origin);
   console.log('someone connected');
+  connection.sendUTF(JSON.stringify({clicks}));
   connection.on('message', msg => {
     if (msg.type === 'utf8') {
       const o = JSON.parse(msg.utf8Data)
