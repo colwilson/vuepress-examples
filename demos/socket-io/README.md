@@ -13,7 +13,7 @@ First, let's install some dependencies:
 You don't need a very complicated server. Here's the simplest one I could come up with:
 
 ```js
-// server.js
+// socket.js
 
 const app = require('express')();
 const http = require('http').Server(app);
@@ -37,10 +37,10 @@ http.listen(9999, () => {
 });
 ```
 
-If you save that to __server.js__ then you can run it:
+If you save that to __socket.js__ then you can run it:
 
 ```bash
-> node server
+> node socket
 listening on *:9999
 ```
 
@@ -91,7 +91,7 @@ export default {
   },
   methods: {
     clickButton() {
-        this.$socket.emit('button_clicked', 'someone clicked a button');
+      this.$socket.emit('button_clicked', 'someone clicked a button');
     }
   }
 }
