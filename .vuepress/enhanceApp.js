@@ -1,4 +1,5 @@
 import VueSocketio from 'vue-socket.io';
+import VueNativeSock from 'vue-native-websocket'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -7,7 +8,13 @@ export default ({
     siteData // site metadata
 }) => {
     if (typeof process === 'undefined') { // process is undefined in a browser 
-        Vue.use(VueSocketio, 'http://localhost:9999');
+        Vue.use(VueNativeSock, 'ws://localhost:9998', { 
+            format: 'json',
+            reconnection: true,
+            reconnectionAttempts: 5,
+            reconnectionDelay: 3000
+         });
+        // Vue.use(VueSocketio, 'http://localhost:9999');
     }
 }
 

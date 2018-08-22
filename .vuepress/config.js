@@ -12,6 +12,7 @@ module.exports = {
       "/demos/local/",
       "/demos/remote/",
       "/demos/remote-async/",
+      "/demos/native/",
       "/demos/socket-io/",
       ["/demos/homepage/", "A Homepage Fit for Heroes"],
       "/demos/netlify/",

@@ -3,6 +3,8 @@
   "scripts": {
     "start": "vuepress dev",
     "publish": "vuepress build",
+    "socket.io": "node socket",
+    "native.socket": "node native",
     "outdated": "npm outdated",
     "update": "npm update"
   },
@@ -11,7 +13,9 @@
     "express": "^4.16.3",
     "semver-compare": "^1.0.0",
     "socket.io": "^2.1.1",
-    "vue-socket.io": "^2.1.1",
-    "vuepress": "^0.14.2"
+    "vue-native-websocket": "^2.0.8",
+    "vue-socket.io": "^2.1.1-b",
+    "vuepress": "^0.14.2",
+    "websocket": "^1.0.26"
   }
 }
