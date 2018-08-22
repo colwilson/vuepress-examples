@@ -11,8 +11,8 @@ export default ({
         Vue.use(VueNativeSock, 'ws://localhost:9998', { 
             format: 'json',
             reconnection: true,
-            reconnectionAttempts: 5000,
-            reconnectionDelay: 300
+            reconnectionAttempts: 5,
+            reconnectionDelay: 3000
          });
         // Vue.use(VueSocketio, 'http://localhost:9999');
     }
