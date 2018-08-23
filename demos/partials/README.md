@@ -23,9 +23,11 @@ The _Version_ component's code looks like this:
 <template>
   <small id='version'>
     Using vuepress version {{loc.version}}
-    <span v-if="upToDate >= 0">✅</span>
-    <span v-else>⚠️</span>
-    , latest version is {{raw.version}}
+    <span v-if="raw">
+      <span v-if="upToDate >= 0">✅</span>
+      <span v-else>⚠️</span>
+      , latest version is {{raw.version}}
+      </span>
   </small>
 </template>
 
@@ -40,7 +42,7 @@ export default {
   data() {
     return {
       loc,
-      raw: { version: "0" }
+      raw: null
     };
   },
   computed: {
@@ -49,8 +51,12 @@ export default {
     }
   },
   async beforeMount() {
-    let res = await axios.get(src);
-    this.$data.raw = res.data;
+    try {
+      let res = await axios.get(src);
+      this.$data.raw = res.data;      
+    } catch (error) {
+      console.err(e)
+    }
   }
 };
 </script>
