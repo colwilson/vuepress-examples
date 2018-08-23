@@ -1,3 +1,10 @@
+---
+meta:
+  - name: description
+    content: Sharing Information with Socket.io
+  - name: keywords
+    content: vuepress vue component socketio socket.io websockets backend
+---
 # Sharing Information with Socket.io
 
 [Socket.io](https://socket.io/) is an implementation of websockets which allow you to send and broadcast information to other clients/apps via a server.

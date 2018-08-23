@@ -5,7 +5,13 @@ actionText: Call to Action →
 actionLink: /
 
 footer: Copyright © Xooooooooooom - 2018
+meta:
+  - name: description
+    content: A simple homepage example 
+  - name: keywords
+    content: vuepress hero homepage homepages footer
 ---
+
 ```yaml
 ---
 home: true
