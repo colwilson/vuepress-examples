@@ -1,3 +1,10 @@
+---
+meta:
+  - name: description
+    content: Rendering Remote API Data (async)
+  - name: keywords
+    content: vuepress vue component remote api json data asynchronous asynchronously
+---
 # Rendering Remote API Data (async)
 
 Use axios async to grab a remote API and render it's contents.

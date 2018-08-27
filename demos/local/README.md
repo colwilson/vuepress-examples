@@ -1,3 +1,10 @@
+---
+meta:
+  - name: description
+    content: Rendering Local JSON Data 
+  - name: keywords
+    content: vuepress vue component local data json
+---
 # Rendering Local JSON Data
 
 Use import to grab local json data and render it's contents.

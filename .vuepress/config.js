@@ -1,6 +1,6 @@
 module.exports = {
   title: "VuePress Examples",
-  description: "no need for a description really",
+  description: "Examples of useful vuepress code",
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],

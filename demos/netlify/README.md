@@ -1,3 +1,10 @@
+---
+meta:
+  - name: description
+    content: Deploy to Netlify from Github
+  - name: keywords
+    content: vuepress netlify deploy
+---
 # Deploy to Netlify from Github
 
 Create a **package.json** file like similar to this:

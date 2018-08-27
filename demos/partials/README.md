@@ -1,3 +1,10 @@
+---
+meta:
+  - name: description
+    content: Using Shared Blocks of Content
+  - name: keywords
+    content: vuepress vue component templates blocks partials insert
+---
 # Using Shared Blocks of Content
 
 You can define blocks of content which can be shared on multiple pages. These are [Vue components](https://vuejs.org/v2/guide/components.html).

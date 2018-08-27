@@ -1,3 +1,11 @@
+---
+meta:
+  - name: description
+    content: Examples of useful vuepress code
+  - name: keywords
+    content: vuepress vue home markdown examples example demos demo
+---
+
 # VuePress Examples
 
 [VuePress](https://vuepress.vuejs.org) is a Vue-powered Static Site Generator which makes putting sites together quickly a breeze.

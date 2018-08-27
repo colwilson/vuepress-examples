@@ -1,3 +1,10 @@
+---
+meta:
+  - name: description
+    content: Sharing Information with Native WebSockets
+  - name: keywords
+    content: vuepress vue component native websockets
+---
 # Sharing Information with Native WebSockets
 
 [Native WebSockets](https://caniuse.com/#feat=websockets) brings websockets without the need to use extension libraries such as socket.io. WebSockets allow you to  send and broadcast information to other clients/apps via a server.

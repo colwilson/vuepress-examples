@@ -6,7 +6,8 @@
     "socket.io": "node socket",
     "native.socket": "node native",
     "outdated": "npm outdated",
-    "update": "npm update"
+    "update": "npm update",
+    "lambdas": "netlify-lambda serve src-lambdas"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -17,5 +18,8 @@
     "vue-socket.io": "^2.1.1-b",
     "vuepress": "^0.14.2",
     "websocket": "^1.0.26"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^0.4.0"
   }
 }
