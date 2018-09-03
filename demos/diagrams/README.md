@@ -1,4 +1,4 @@
-### Adding Techical Diagrams with Mermaid
+### Adding Technical Diagrams with Mermaid
 
 [Mermaid](https://mermaidjs.github.io/) allows you to add technical diagrams to your markdown and is a great ally if you are writing technical documents in vuepress:
 

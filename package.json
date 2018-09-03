@@ -3,6 +3,7 @@
   "scripts": {
     "start": "vuepress dev",
     "publish": "vuepress build",
+    "serve": "cd .vuepress/dist/ && python -m SimpleHTTPServer 8000",
     "socket.io": "node socket",
     "native.socket": "node native",
     "outdated": "npm outdated",

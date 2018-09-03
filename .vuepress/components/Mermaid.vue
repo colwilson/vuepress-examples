@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  mounted() {
+  beforeMount() {
     import("mermaid/dist/mermaid").then(m => {
       m.initialize({
         startOnLoad: true
