@@ -11,18 +11,10 @@ You can define blocks of content which can be shared on multiple pages. These ar
 
 For example here is the _Version_ component which is also used on the Home page. 
 
-<template>
-    <div class="version">
-        <Version/>
-    </div>
-</template>
+<div class="version">
+    <Version/>
+</div>
 
-<script>
-import Version from '../../components/Version'
-export default {
-  components: {Version},
-}
-</script>
 
 The _Version_ component's code looks like this:
 
@@ -41,7 +33,7 @@ The _Version_ component's code looks like this:
 <script>
 const axios = require("axios");
 const cmp = require("semver-compare");
-const loc = require("../node_modules/vuepress/package.json");
+const loc = require("../../node_modules/vuepress/package.json");
 const src =
   "https://raw.githubusercontent.com/vuejs/vuepress/master/package.json";
 export default {
@@ -76,22 +68,12 @@ export default {
 </style>
 ```
 
-You insert a component in the markdown like this:
+You insert a component in the markdown like this (the surrounding `div` is just for styling purposes):
 
 ```vue
-<template>
-    <div class="version">
-        <Version/>
-    </div>
-</template>
-
-<script>
-import Version from '../../components/Version'
-export default {
-  components: {Version},
-}
-</script>
-
+<div class="version">
+    <Version/>
+</div>
 ```
 Vue components can be as simple as a text block that you want to reuse, or they can be much more complex. However, if they start to get really complex then perhaps it's time to just start using the [Vue Framework](https://vuejs.org) itself.
 

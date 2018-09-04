@@ -17,23 +17,4 @@ Please consider sharing your examples by [creating a pull request](https://githu
 If you have any ideas for examples you'd like to see then [raise as an issue](https://github.com/colwilson/vuepress-examples/issues/new) labelled **enhancement**
 
 
-
-
-
-
-<template>
-    <div id="version">
-        <Version/>
-    </div>
-</template>
-
-<script>
-import Version from './components/Version'
-export default {
-  components: {Version},
-}
-</script>
-
-<style>
-     body {background-color: white;} 
-</style>
+<Version/>

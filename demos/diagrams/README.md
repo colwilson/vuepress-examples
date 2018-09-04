@@ -67,5 +67,5 @@ Class01 : int gorilla
 Class08 <--> C2: Cool label
 </mermaid>
 ```
-Thanks to [neumayer's example code here](https://github.com/vuejs/vuepress/issues/111#event-1797373924). And as he says there, if you need to add blank lines the you need to add a `&nbsp;` to the end of the blank line or vuepress will break.
+Thanks to [neumayer's example code here](https://github.com/vuejs/vuepress/issues/111#event-1797373924). And as he says there, if you need to add blank lines then you need to add a `&nbsp;` to the end of the blank line or vuepress will break.
 
