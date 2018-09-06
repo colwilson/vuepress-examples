@@ -17,6 +17,7 @@ module.exports = {
       ["/demos/homepage/", "A Homepage Fit for Heroes"],
       "/demos/netlify/",
       "/demos/partials/",
+      "/demos/diagrams/",
     ],
     nav: [
       { text: "Home", link: "/" }
