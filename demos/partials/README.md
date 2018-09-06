@@ -33,7 +33,7 @@ The _Version_ component's code looks like this:
 <script>
 const axios = require("axios");
 const cmp = require("semver-compare");
-const loc = require("../../node_modules/vuepress/package.json");
+const loc = require("vuepress/package.json");
 const src =
   "https://raw.githubusercontent.com/vuejs/vuepress/master/package.json";
 export default {
