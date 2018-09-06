@@ -36,7 +36,7 @@ and create a component in _.vuepress/components_
 
 <script>
 export default {
-  mounted() {
+  beforeMount() {
     import("mermaid/dist/mermaid").then(m => {
       m.initialize({
         startOnLoad: true
