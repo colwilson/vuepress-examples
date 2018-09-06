@@ -7,14 +7,14 @@ export default ({
     router, // the router instance for the app
     siteData // site metadata
 }) => {
-    if (typeof process === 'undefined') { // process is undefined in a browser 
-        Vue.use(VueNativeSock, 'ws://localhost:9998', { 
-            format: 'json',
-            reconnection: true,
-            reconnectionAttempts: 5,
-            reconnectionDelay: 3000
-         });
-        // Vue.use(VueSocketio, 'http://localhost:9999');
-    }
+    // if (typeof process === 'undefined') { // process is undefined in a browser 
+    //     Vue.use(VueNativeSock, 'ws://localhost:9998', { 
+    //         format: 'json',
+    //         reconnection: true,
+    //         reconnectionAttempts: 5,
+    //         reconnectionDelay: 3000
+    //      });
+    //     // Vue.use(VueSocketio, 'http://localhost:9999');
+    // }
 }
 
