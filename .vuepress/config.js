@@ -1,5 +1,7 @@
+const version = require("./../package.json").version;
+
 module.exports = {
-  title: "VuePress Examples",
+  title: `VuePress Examples ${version}`,
   description: "Examples of useful vuepress code",
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]

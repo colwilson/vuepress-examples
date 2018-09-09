@@ -1,5 +1,5 @@
 <template>
-  <small id='version'>
+  <small id='vuepress_versioning'>
     Using vuepress version {{loc.version}}
     <span v-if="raw">
       <span v-if="upToDate >= 0">✅</span>
@@ -16,7 +16,7 @@ const loc = require("vuepress/package.json");
 const src =
   "https://raw.githubusercontent.com/vuejs/vuepress/master/package.json";
 export default {
-  name: "version",
+  name: "vuepress_versioning",
   data() {
     return {
       loc,
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style scoped>
-#version {
+#vuepress_versioning {
   color: grey;
   border-top: 2px solid grey;
 }

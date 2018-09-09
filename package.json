@@ -1,5 +1,6 @@
 {
   "name": "vuepress-examples",
+  "version": "1.0.3",
   "scripts": {
     "start": "vuepress dev",
     "publish": "vuepress build",
@@ -8,7 +9,12 @@
     "native.socket": "node native",
     "outdated": "npm outdated",
     "update": "npm update",
-    "lambdas": "netlify-lambda serve src-lambdas"
+    "lambdas": "netlify-lambda serve src-lambdas",
+    "tag_patch": "npm version patch",
+    "tag_minor": "npm version minor",
+    "tag_major": "npm version major",
+    "version": "",
+    "postversion": "git tag $npm_package_version && git push && git push --tags"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -16,7 +22,7 @@
     "mermaid": "^8.0.0-rc.8",
     "semver-compare": "^1.0.0",
     "socket.io": "^2.1.1",
-    "vue-native-websocket": "^2.0.8",
+    "vue-native-websocket": "^2.0.9",
     "vue-socket.io": "^2.1.1-b",
     "vuepress": "^0.14.2",
     "websocket": "^1.0.26"
