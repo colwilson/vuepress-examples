@@ -7,78 +7,30 @@ meta:
 ---
 # Using Shared Blocks of Content
 
-You can define blocks of content which can be shared on multiple pages. These are [Vue components](https://vuejs.org/v2/guide/components.html).
+You can define blocks of content which can be shared on multiple pages. These are [Vue Single File Components](https://vuejs.org/v2/guide/single-file-components.html). Which you should put in the directory `.vuepress/components`.
 
-For example here is the _Version_ component which is also used on the Home page. 
+For example here is the _VuePressVersioning_ component which is also used on the Home page. 
 
-<div class="version">
-    <Version/>
+<div class="highlighted">
+    <VuePressVersioning/>
 </div>
 
 
-The _Version_ component's code looks like this:
+The _VuePressVersioning_ component's code looks like this:
 
-```vue
-<template>
-  <small id='version'>
-    Using vuepress version {{loc.version}}
-    <span v-if="raw">
-      <span v-if="upToDate >= 0">✅</span>
-      <span v-else>⚠️</span>
-      , latest version is {{raw.version}}
-      </span>
-  </small>
-</template>
-
-<script>
-const axios = require("axios");
-const cmp = require("semver-compare");
-const loc = require("vuepress/package.json");
-const src =
-  "https://raw.githubusercontent.com/vuejs/vuepress/master/package.json";
-export default {
-  name: "version",
-  data() {
-    return {
-      loc,
-      raw: null
-    };
-  },
-  computed: {
-    upToDate() {
-      return cmp(this.loc.version, this.raw.version);
-    }
-  },
-  async beforeMount() {
-    try {
-      let res = await axios.get(src);
-      this.$data.raw = res.data;      
-    } catch (error) {
-      console.err(e)
-    }
-  }
-};
-</script>
-
-<style scoped>
-#version {
-  color: grey;
-  border-top: 2px solid grey;
-}
-</style>
-```
+<<< @/.vuepress/components/VuePressVersioning.vue
 
 You insert a component in the markdown like this (the surrounding `div` is just for styling purposes):
 
 ```vue
-<div class="version">
-    <Version/>
+<div class="highlighted">
+    <VuePressVersioning/>
 </div>
 ```
 Vue components can be as simple as a text block that you want to reuse, or they can be much more complex. However, if they start to get really complex then perhaps it's time to just start using the [Vue Framework](https://vuejs.org) itself.
 
 <style scoped>
-.version {
+.highlighted {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;

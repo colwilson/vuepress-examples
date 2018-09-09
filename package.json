@@ -10,6 +10,9 @@
     "outdated": "npm outdated",
     "update": "npm update",
     "lambdas": "netlify-lambda serve src-lambdas",
+    "tag_patch": "npm version patch",
+    "tag_minor": "npm version minor",
+    "tag_major": "npm version major",
     "version": "",
     "postversion": "git tag $npm_package_version && git push && git push --tags"
   },
