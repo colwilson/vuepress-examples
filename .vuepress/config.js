@@ -11,6 +11,7 @@ module.exports = {
     lastUpdated: false,
     sidebar: [
       ["/", "Home"],
+      "/demos/plugins/",
       "/demos/local/",
       "/demos/remote/",
       "/demos/remote-async/",

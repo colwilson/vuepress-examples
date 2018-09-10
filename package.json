@@ -24,6 +24,7 @@
     "socket.io": "^2.1.1",
     "vue-native-websocket": "^2.0.9",
     "vue-socket.io": "^2.1.1-b",
+    "vue-typed-js": "^0.1.2",
     "vuepress": "^0.14.2",
     "websocket": "^1.0.26"
   },
