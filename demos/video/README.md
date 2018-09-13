@@ -83,8 +83,14 @@ and import it into `.vuepress/enhanceApp.js`
 ```js
 // .vuepress/enhanceApp.js
 import 'vue-plyr'
-import 'vue-plyr/dist/vue-plyr.css'
 ```
+
+## Importing packaged CSS
+You can't just import the vue-plyr css into `.vuepress/enhanceApp.js` unfortunately, you need to create a utility style component to ensure webpack picks it up. It can be used to import any styling from other packages in the same way. 
+
+So `.vuepress/components/Styles.vue` would look like this in this instance:
+
+<<< .vuepress/components/Styles.vue
 
 ::: tip
 You could of course use your own styling.
