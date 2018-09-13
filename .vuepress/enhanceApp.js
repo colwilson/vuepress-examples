@@ -1,6 +1,8 @@
 import VueSocketio from 'vue-socket.io';
 import VueNativeSock from 'vue-native-websocket'
 import VueTypedJs from 'vue-typed-js'
+import 'vue-plyr'
+import 'vue-plyr/dist/vue-plyr.css'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -21,7 +23,7 @@ export default ({
         // // disabled since there is no server running on the live site
         // Vue.use(VueSocketio, 'http://localhost:9999');
 
-        Vue.use(VueTypedJs)        
+        Vue.use(VueTypedJs)
     }
 }
 
