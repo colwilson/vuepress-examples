@@ -21,6 +21,7 @@ module.exports = {
       "/demos/netlify/",
       "/demos/partials/",
       "/demos/diagrams/",
+      "/demos/video/",
     ],
     nav: [
       { text: "Home", link: "/" }
