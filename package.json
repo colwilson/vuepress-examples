@@ -15,7 +15,7 @@
     "tag_major": "npm version major",
     "preversion": "node build_sitemap && git commit -m '.' -- .vuepress/sitemap.xml",
     "version": "",
-    "postversion": "git tag $npm_package_version && git push && git push --tags"
+    "postversion---": "git tag $npm_package_version && git push && git push --tags"
   },
   "dependencies": {
     "axios": "^0.18.0",
