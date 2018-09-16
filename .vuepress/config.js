@@ -30,14 +30,15 @@ module.exports = {
     repoLabel: "Contribute an Example !",
     displayAllHeaders: true
   },
-  // markdown: {
-  //   lineNumbers: true
-  // },
-  // configureWebpack: {
-  //   module: {
-  //     rules: [
-  //       { test: /\.md$/, use: './loader' }
-  //     ]
-  //   }
-  // }
+  markdown: {
+    lineNumbers: true
+  },
+  
+  configureWebpack: {
+    // module: {
+    //   rules: [
+    //     { test: /\.md$/, use: './loader' }
+    //   ]
+    // }
+  }
 };

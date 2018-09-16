@@ -1,6 +1,6 @@
 {
   "name": "vuepress-examples",
-  "version": "1.2.0",
+  "version": "1.3.7",
   "scripts": {
     "start": "vuepress dev",
     "publish": "vuepress build",
@@ -10,9 +10,11 @@
     "outdated": "npm outdated",
     "update": "npm update",
     "lambdas": "netlify-lambda serve src-lambdas",
-    "tag_patch": "npm version patch",
-    "tag_minor": "npm version minor",
-    "tag_major": "npm version major",
+    "commit_package": "git add .vuepress/public/sitemap.xml package.json && git commit -m 'sitemap updated'",
+    "tag_patch": "npm run commit_package && npm version patch",
+    "tag_minor": "npm run commit_package && npm version minor",
+    "tag_major": "npm run commit_package && npm version major",
+    "preversion": "node build_sitemap",
     "version": "",
     "postversion": "git tag $npm_package_version && git push && git push --tags"
   },
@@ -22,12 +24,13 @@
     "mermaid": "^8.0.0-rc.8",
     "plyr": "^3.4.3",
     "semver-compare": "^1.0.0",
+    "sitemap": "^2.0.1",
     "socket.io": "^2.1.1",
     "vue-native-websocket": "^2.0.11",
     "vue-plyr": "^4.0.0",
     "vue-socket.io": "^2.1.1-b",
     "vue-typed-js": "^0.1.2",
-    "vuepress": "^0.14.3",
+    "vuepress": "^0.14.4",
     "websocket": "^1.0.26"
   },
   "devDependencies": {
