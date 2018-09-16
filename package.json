@@ -13,7 +13,7 @@
     "tag_patch": "npm version patch",
     "tag_minor": "npm version minor",
     "tag_major": "npm version major",
-    "preversion": "node build_sitemap && git commit -m 'new sitemap' -- ./.vuepress/sitemap.xml",
+    "preversion": "node build_sitemap && git commit -m 'new sitemap' -- .vuepress/sitemap.xml",
     "version": "",
     "postversion": "git tag $npm_package_version && git push && git push --tags"
   },
