@@ -10,7 +10,7 @@
     "outdated": "npm outdated",
     "update": "npm update",
     "lambdas": "netlify-lambda serve src-lambdas",
-    "commit_package": "git add .vuepress/public/sitemap.xml package.json && git commit -m '.'",
+    "commit_package": "git add .vuepress/public/sitemap.xml package.json && git commit -m 'sitemap updated'",
     "tag_patch": "npm run commit_package && npm version patch",
     "tag_minor": "npm run commit_package && npm version minor",
     "tag_major": "npm run commit_package && npm version major",
