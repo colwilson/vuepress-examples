@@ -3,6 +3,7 @@ const fs = require('fs')
 const package = require('./.vuepress/config')
 
 const hostname = 'https://vuepress-examples.netlify.com/'
+const fn = './.vuepress/public/sitemap.xml'
 let urls = []
 
 for (const obj of package.themeConfig.sidebar) {
@@ -21,7 +22,7 @@ for (const obj of package.themeConfig.sidebar) {
 const sitemap = sm.createSitemap({ hostname, urls });
 const xml = sitemap.toXML()
 
-fs.writeFile('./.vuepress/sitemap.xml', xml, err => {
+fs.writeFile(fn, xml, err => {
   if (err) throw (err)
-  console.log("The file was saved!");
+  console.log('updated', fn);
 }); 
