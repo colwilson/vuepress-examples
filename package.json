@@ -1,6 +1,6 @@
 {
   "name": "vuepress-examples",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "scripts": {
     "start": "vuepress dev",
     "publish": "vuepress build",
