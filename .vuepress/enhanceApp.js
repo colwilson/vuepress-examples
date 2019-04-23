@@ -25,6 +25,7 @@ export default ({
 
         Vue.use(VueTypedJs)
         
+        const Ads = require('vue-google-adsense')
         Vue.use(require('vue-script2'))
  
         Vue.use(Ads.Adsense)
