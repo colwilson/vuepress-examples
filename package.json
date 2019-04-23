@@ -26,14 +26,17 @@
     "semver-compare": "^1.0.0",
     "sitemap": "^2.1.0",
     "socket.io": "^2.2.0",
+    "vue-google-adsense": "^1.5.1",
     "vue-native-websocket": "^2.0.13",
     "vue-plyr": "^4.0.0",
+    "vue-script2": "^2.0.3",
     "vue-socket.io": "^2.1.1",
     "vue-typed-js": "^0.1.2",
     "vuepress": "^0.14.11",
     "websocket": "^1.0.28"
   },
   "devDependencies": {
-    "netlify-lambda": "^0.4.0"
+    "netlify-lambda": "^0.4.0",
+    "webpack": "^4.28.4"
   }
 }

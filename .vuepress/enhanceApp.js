@@ -1,6 +1,7 @@
 import VueSocketio from 'vue-socket.io';
 import VueNativeSock from 'vue-native-websocket'
 import VueTypedJs from 'vue-typed-js'
+import Ads from 'vue-google-adsense'
 import 'vue-plyr'
 
 export default ({
@@ -23,6 +24,12 @@ export default ({
         // Vue.use(VueSocketio, 'http://localhost:9999');
 
         Vue.use(VueTypedJs)
+        
+        Vue.use(require('vue-script2'))
+ 
+        Vue.use(Ads.Adsense)
+        Vue.use(Ads.InArticleAdsense)
+        Vue.use(Ads.InFeedAdsense)
     }
 }
 
