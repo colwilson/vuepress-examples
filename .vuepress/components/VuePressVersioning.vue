@@ -14,7 +14,7 @@ const axios = require("axios");
 const cmp = require("semver-compare");
 const loc = require("vuepress/package.json");
 const src =
-  "https://raw.githubusercontent.com/vuejs/vuepress/master/package.json";
+  "https://raw.githubusercontent.com/vuejs/vuepress/master/lern.json";
 export default {
   name: "vuepress_versioning",
   data() {
