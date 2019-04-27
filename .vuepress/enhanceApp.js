@@ -1,7 +1,7 @@
 import VueSocketio from 'vue-socket.io';
 import VueNativeSock from 'vue-native-websocket'
 import VueTypedJs from 'vue-typed-js'
-import Ads from 'vue-google-adsense'
+import VueGtm from 'vue-gtm';
 import 'vue-plyr'
 
 export default ({
@@ -25,12 +25,12 @@ export default ({
 
         Vue.use(VueTypedJs)
         
-        const Ads = require('vue-google-adsense')
-        Vue.use(require('vue-script2'))
- 
-        Vue.use(Ads.Adsense)
-        Vue.use(Ads.InArticleAdsense)
-        Vue.use(Ads.InFeedAdsense)
+        Vue.use(VueGtm, {
+            id: 'GTM-KL5PBFJ',
+            enabled: true,
+            debug: true,
+            vueRouter: router
+        });
     }
 }
 

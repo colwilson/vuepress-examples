@@ -27,6 +27,7 @@
     "sitemap": "^2.1.0",
     "socket.io": "^2.2.0",
     "vue-google-adsense": "^1.5.1",
+    "vue-gtm": "^2.0.0",
     "vue-native-websocket": "^2.0.13",
     "vue-plyr": "^4.0.0",
     "vue-script2": "^2.0.3",
