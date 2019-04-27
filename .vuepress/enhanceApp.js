@@ -1,7 +1,7 @@
 import VueSocketio from 'vue-socket.io';
 import VueNativeSock from 'vue-native-websocket'
 import VueTypedJs from 'vue-typed-js'
-import 'vue-plyr'
+import VueGtm from 'vue-gtm';
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -23,6 +23,13 @@ export default ({
         // Vue.use(VueSocketio, 'http://localhost:9999');
 
         Vue.use(VueTypedJs)
+        
+        Vue.use(VueGtm, {
+            id: 'GTM-KL5PBFJ',
+            enabled: true,
+            debug: true,
+            vueRouter: router
+        });
     }
 }
 
