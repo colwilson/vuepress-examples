@@ -1,7 +1,6 @@
 import VueSocketio from 'vue-socket.io';
 import VueNativeSock from 'vue-native-websocket'
 import VueTypedJs from 'vue-typed-js'
-import 'vue-plyr'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app

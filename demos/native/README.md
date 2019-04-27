@@ -142,10 +142,14 @@ export default {
     }
   },
   beforeMount() {
-    this.$options.sockets.onmessage = (msg) => {
-      let o = JSON.parse(msg.data)
-      this.clicks = o.clicks
-      console.log('click count', this.clicks)
+    try {
+      this.$options.sockets.onmessage = (msg) => {
+        let o = JSON.parse(msg.data)
+        this.clicks = o.clicks
+        console.log('click count', this.clicks)
+      }
+    } catch {
+      console.log("sockets are not configured, read the document again")
     }
   }
 }
