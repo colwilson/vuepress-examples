@@ -19,6 +19,7 @@
     "postversion": "git tag $npm_package_version && git push && git push --tags"
   },
   "dependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.47",
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "mermaid": "^8.0.0",
@@ -31,11 +32,10 @@
     "vue-script2": "^2.0.3",
     "vue-socket.io": "^2.1.1",
     "vue-typed-js": "^0.1.2",
-    "vuepress": "^0.14.11",
+    "vuepress": "^1.0.0-alpha.47",
     "websocket": "^1.0.28"
   },
   "devDependencies": {
-    "netlify-lambda": "^0.4.0",
     "webpack": "^4.30.0"
   }
 }
