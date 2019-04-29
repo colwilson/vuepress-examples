@@ -7,9 +7,6 @@ module.exports = {
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
   plugins: [
-    ['@vuepress/google-analytics', {
-      ga: 'UA-20931749-8'
-    }]
   ],
   themeConfig: {
     lastUpdated: false,
