@@ -1,5 +1,5 @@
 <template>
-  <small id='vuepress_versioning'>
+  <small id='VuePressVersioning'>
     Using vuepress version {{loc.version}}
     <span v-if="raw">
       <span v-if="upToDate >= 0">✅</span>
@@ -14,9 +14,9 @@ const axios = require("axios");
 const cmp = require("semver-compare");
 const loc = require("vuepress/package.json");
 const src =
-  "https://raw.githubusercontent.com/vuejs/vuepress/master/lern.json";
+  "https://raw.githubusercontent.com/vuejs/vuepress/master/lerna.json";
 export default {
-  name: "vuepress_versioning",
+  name: "VuePressVersioning",
   data() {
     return {
       loc,

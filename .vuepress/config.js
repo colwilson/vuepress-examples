@@ -5,11 +5,12 @@ module.exports = {
   description: "Examples of useful vuepress code",
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
-    // ['script', { src: "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" }],
-    // ['script', {}, 
-    // '(adsbygoogle = window.adsbygoogle || []).push({  google_ad_client: ca-pub-8143086736444913,  enable_page_level_ads: true });'],
   ],
-  ga: "UA-20931749-8",
+  plugins: [
+    ['@vuepress/google-analytics', {
+      ga: 'UA-20931749-8'
+    }]
+  ],
   themeConfig: {
     lastUpdated: false,
     sidebar: [
@@ -33,10 +34,9 @@ module.exports = {
     repoLabel: "Contribute an Example !",
     displayAllHeaders: true
   },
-  markdown: {
+  extendMarkdown(md) {
     lineNumbers: true
   },
-  
   configureWebpack: {
     // module: {
     //   rules: [
