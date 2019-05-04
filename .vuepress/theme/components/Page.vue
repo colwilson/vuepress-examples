@@ -172,7 +172,7 @@ function flatten(items, res) {
 @require '../styles/wrapper.styl';
 
 .content:not(.custom) > h1:first-child {
-  margin-top: -5rem;
+  margin-top: -4.5rem;
   margin-bottom: 1rem;
 }
 
