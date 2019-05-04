@@ -51,5 +51,8 @@ export default {
 </script>
 
 <style scoped>
-
+.content:not(.custom){
+  padding: 0.2rem, 0.2rem, 0.2rem, 0.2rem;
+  /* background-color: silver; */
+}
 </style>
