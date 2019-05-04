@@ -1,8 +1,8 @@
 {
   "name": "vuepress-examples",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "scripts": {
-    "start": "vuepress dev",
+    "start": "vuepress dev --no-clear-screen --debug",
     "publish": "vuepress build",
     "serve": "cd .vuepress/dist/ && python -m SimpleHTTPServer 8000",
     "socket.io": "node socket",
@@ -23,7 +23,6 @@
     "semver-compare": "^1.0.0",
     "sitemap": "^2.1.0",
     "socket.io": "^2.2.0",
-    "vue-google-adsense": "^1.5.1",
     "vue-gtm": "^2.0.0",
     "vue-native-websocket": "^2.0.13",
     "vue-script2": "^2.0.3",
