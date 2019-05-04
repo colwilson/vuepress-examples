@@ -12,12 +12,12 @@ Displaying a video might be just as simple as adding this to your `README.md`
 
 ```html
 <video width="560" height="240" controls>
-  <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+  <source src="https://sample-videos.com/video123/mp4/480/big_buck_bunny_480p_1mb.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 ```
 <video width="560" controls>
-  <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+  <source src="https://sample-videos.com/video123/mp4/480/big_buck_bunny_480p_1mb.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video> 
 
