@@ -23,6 +23,7 @@ module.exports = {
       "/demos/partials/",
       "/demos/diagrams/",
       "/demos/video/",
+      "/demos/extending/",
     ],
     nav: [
       { text: "Home", link: "/" }

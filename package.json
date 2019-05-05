@@ -7,7 +7,7 @@
     "serve": "cd .vuepress/dist/ && python -m SimpleHTTPServer 8000",
     "socket.io": "node socket",
     "native.socket": "node native",
-    "commit_package": "git add .vuepress/public/sitemap.xml package.json && git commit -m 'sitemap updated'",
+    "commit_package": "echo $RANDOM > ./.rnd && git add .vuepress/public/sitemap.xml package.json ./.rnd && git commit -m 'sitemap updated'",
     "tag_patch": "yarn run commit_package && npm version patch",
     "tag_minor": "yarn run commit_package && npm version minor",
     "tag_major": "yarn run commit_package && npm version major",
