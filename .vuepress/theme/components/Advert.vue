@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <div class="ad-spacer"></div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- vuepress examples leaderboard -->
@@ -50,9 +51,13 @@ export default {
 }
 </script>
 
-<style scoped>
-.content:not(.custom){
-  padding: 0.2rem, 0.2rem, 0.2rem, 0.2rem;
-  /* background-color: silver; */
-}
+<style lang="stylus">
+
+// .adsbygoogle
+//   background-color red
+
+h1:first-child 
+  margin-top -6.5rem !important
+  // background-color green
+
 </style>
