@@ -34,6 +34,7 @@
     "websocket": "^1.0.28"
   },
   "devDependencies": {
+    "core-js": "@2.6.5",
     "http-server": "^0.11.1",
     "webpack": "^4.28.4"
   }
