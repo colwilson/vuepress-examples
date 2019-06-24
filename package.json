@@ -28,10 +28,12 @@
     "vue-script2": "^2.0.3",
     "vue-socket.io": "3.0.7",
     "vue-typed-js": "^0.1.2",
-    "vuepress": "^1.0.0-alpha.47",
+    "vuepress": "^1.0.2",
     "websocket": "^1.0.28"
   },
   "devDependencies": {
-    "webpack": "^4.30.0"
+    "core-js": "^2.6.9",
+    "http-server": "^0.11.1",
+    "webpack": "^4.28.4"
   }
 }
