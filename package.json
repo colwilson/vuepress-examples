@@ -28,7 +28,7 @@
     "vue-script2": "^2.0.3",
     "vue-socket.io": "3.0.7",
     "vue-typed-js": "^0.1.2",
-    "vuepress": "^1.0.0-alpha.47",
+    "vuepress": "^1.0.2",
     "websocket": "^1.0.28"
   },
   "devDependencies": {
