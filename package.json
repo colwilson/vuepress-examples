@@ -1,6 +1,6 @@
 {
   "name": "vuepress-examples",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "scripts": {
     "start": "vuepress dev --no-clear-screen --debug",
     "publish": "vuepress build",
