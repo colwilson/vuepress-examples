@@ -1,13 +1,13 @@
 {
   "name": "vuepress-examples",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "scripts": {
     "start": "vuepress dev --no-clear-screen --debug",
     "publish": "vuepress build",
     "serve": "cd .vuepress/dist/ && http-server -p 8000",
     "socket.io": "node socket",
     "native.socket": "node native",
-    "commit_package": "od -A n -t d -N 3 /dev/urandom > ./.rnd && git add .vuepress/public/sitemap.xml package.json ./.rnd && git commit -m 'sitemap updated'",
+    "commit_package": "od -A n -t d -N 3 /dev/urandom > ./.rnd && git add .vuepress/public/sitemap.xml package.json ./.rnd && git commit -m sitemap_updated",
     "tag_patch": "yarn run commit_package && npm version patch",
     "tag_minor": "yarn run commit_package && npm version minor",
     "tag_major": "yarn run commit_package && npm version major",
