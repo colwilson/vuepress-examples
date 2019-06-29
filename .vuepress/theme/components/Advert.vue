@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div class="ad-spacer"></div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -55,11 +55,14 @@ export default {
 
 <style lang="stylus">
 
-// .adsbygoogle
-//   background-color red
+.adsbygoogle
+  margin-top 4.5rem !important
+  padding: 10px;
+  // background-color red
 
 h1:first-child 
-  margin-top -6.5rem !important
+  margin-top -5rem !important
   // background-color green
+
 
 </style>
