@@ -4,7 +4,7 @@
   "scripts": {
     "start": "vuepress dev --no-clear-screen --debug",
     "publish": "vuepress build",
-    "serve": "cd .vuepress/dist/ && python -m SimpleHTTPServer 8000",
+    "serve": "cd .vuepress/dist/ && http-server -p 8000",
     "socket.io": "node socket",
     "native.socket": "node native",
     "commit_package": "od -A n -t d -N 3 /dev/urandom > ./.rnd && git add .vuepress/public/sitemap.xml package.json ./.rnd && git commit -m sitemap_updated",
@@ -32,6 +32,8 @@
     "websocket": "^1.0.28"
   },
   "devDependencies": {
-    "webpack": "^4.30.0"
+    "core-js": "^2.6.9",
+    "http-server": "^0.11.1",
+    "webpack": "^4.28.4"
   }
 }
