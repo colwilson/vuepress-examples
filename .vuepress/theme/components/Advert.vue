@@ -55,11 +55,9 @@ export default {
 
 <style lang="stylus">
 
-// .adsbygoogle
-//   background-color red
+.adsbygoogle
+  margin-top 4rem !important
+  // background-color red
 
-h1:first-child 
-  margin-top -6.5rem !important
-  // background-color green
 
 </style>
