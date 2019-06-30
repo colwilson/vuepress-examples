@@ -22,7 +22,7 @@ module.exports = {
       "/demos/netlify/",
       "/demos/partials/",
       "/demos/diagrams/",
-      "/demos/tweet/", "Displaying Tweets"],
+      "/demos/tweet/",
       "/demos/video/",
       "/demos/extending/",
     ],
