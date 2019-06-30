@@ -6,6 +6,8 @@ meta:
     content: vuepress vue component twitter tweet
 ---
 
+# Displaying Tweets
+
 Thanks to [vue-tweet-embed](https://github.com/capaj/react-tweet-embed) you can display tweets really simply.
 
 Install the module:
