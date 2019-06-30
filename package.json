@@ -27,6 +27,7 @@
     "vue-native-websocket": "^2.0.13",
     "vue-script2": "^2.0.3",
     "vue-socket.io": "3.0.7",
+    "vue-tweet-embed": "^2.3.0",
     "vue-typed-js": "^0.1.2",
     "vuepress": "^1.0.2",
     "websocket": "^1.0.28"
