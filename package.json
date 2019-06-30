@@ -13,7 +13,7 @@
     "tag_major": "yarn run commit_package && npm version major",
     "preversion": "node build_sitemap",
     "version": "",
-    "postversion": "git tag %npm_package_version% && git push && git push --tags"
+    "postversion": "cross-var git tag $npm_package_version && git push && git push --tags"
   },
   "dependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.2",
