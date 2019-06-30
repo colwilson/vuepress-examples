@@ -18,6 +18,7 @@
   "dependencies": {
     "@vuepress/plugin-google-analytics": "^1.0.2",
     "axios": "^0.18.0",
+    "cross-var": "^1.1.0",
     "express": "^4.16.4",
     "mermaid": "^8.0.0",
     "semver-compare": "^1.0.0",
