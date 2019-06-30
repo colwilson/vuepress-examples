@@ -7,7 +7,7 @@
     "serve": "cd .vuepress/dist/ && http-server -p 8000",
     "socket.io": "node socket",
     "native.socket": "node native",
-    "commit_package": "od -A n -t d -N 3 /dev/urandom > ./.rnd && git add .vuepress/public/sitemap.xml package.json ./.rnd && git commit -m 'sitemap updated'",
+    "commit_package": "od -A n -t d -N 3 /dev/urandom > ./.rnd && git add .vuepress/public/sitemap.xml package.json ./.rnd && git commit -m sitemap_updated",
     "tag_patch": "yarn run commit_package && npm version patch",
     "tag_minor": "yarn run commit_package && npm version minor",
     "tag_major": "yarn run commit_package && npm version major",
@@ -16,7 +16,7 @@
     "postversion": "git tag $npm_package_version && git push && git push --tags"
   },
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.47",
+    "@vuepress/plugin-google-analytics": "^1.0.2",
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "mermaid": "^8.0.0",
