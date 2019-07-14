@@ -27,7 +27,7 @@ module.exports = {
 
 ```
 
-In a nutshell, this replicates having every vue file from the default theme in the `./vuepress/themes` directory without actually having to have them physically there. 
+In a nutshell, this replicates having every vue file from the default theme in the `.vuepress/themes` directory without actually having to have them physically there. 
 
 ::: tip
 Gotcha alert! this does not mean that it replicates all the js and css files too though. If you add a vue file that references e.g. css files, the css files has to exist in the directory. 
