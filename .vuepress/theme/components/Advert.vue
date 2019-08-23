@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div class="ad-spacer"></div>
 
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -58,6 +58,7 @@ export default {
 .adsbygoogle
   margin-top 4rem !important
   // background-color red
+
 
 
 </style>
