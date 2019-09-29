@@ -16,26 +16,26 @@
     "postversion": "cross-var git tag $npm_package_version && git push && git push --tags"
   },
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "^1.0.2",
+    "@vuepress/plugin-google-analytics": "^1.1.0",
     "axios": "^0.18.0",
     "cross-var": "^1.1.0",
-    "express": "^4.16.4",
-    "mermaid": "^8.0.0",
+    "express": "^4.17.1",
+    "mermaid": "^8.3.1",
     "semver-compare": "^1.0.0",
     "sitemap": "^2.1.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.3.0",
     "vue-gtm": "^2.0.0",
     "vue-native-websocket": "^2.0.13",
     "vue-script2": "^2.0.3",
     "vue-socket.io": "3.0.7",
     "vue-tweet-embed": "^2.3.0",
     "vue-typed-js": "^0.1.2",
-    "vuepress": "^1.0.2",
-    "websocket": "^1.0.28"
+    "vuepress": "^1.1.0",
+    "websocket": "^1.0.30"
   },
   "devDependencies": {
     "core-js": "^2.6.9",
     "http-server": "^0.11.1",
-    "webpack": "^4.28.4"
+    "webpack": "^4.41.0"
   }
 }
