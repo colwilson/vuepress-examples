@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 google.com, pub-8143086736444913, DIRECT, f08c47fec0942fa0  
+=======
+google.com, pub-8143086736444913, DIRECT, f08c47fec0942fa0
+>>>>>>> dev

@@ -2,7 +2,7 @@ const sm = require('sitemap')
 const fs = require('fs')
 const package = require('./.vuepress/config')
 
-const hostname = 'https://vuepress-examples.netlify.com/'
+const hostname = 'https://vuepress-examples.netlify.app/'
 const fn = './.vuepress/public/sitemap.xml'
 let urls = []
 
