@@ -4,6 +4,8 @@ meta:
     content: Examples of useful vuepress code
   - name: keywords
     content: vuepress vue home markdown examples example demos demo
+    name: google-site-verification
+    content: MKhxeIkxD3xl3yoMpNV_Bb9S-DKyN1LhGRucsmwrPAc
 ---
 
 # VuePress Examples
