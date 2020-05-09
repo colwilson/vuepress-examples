@@ -7,7 +7,7 @@ meta:
 ---
 # Rendering Local JSON Data
 
-Use import to grab local json data and render it's contents.
+Use import to grab local json data and render its contents.
 
 ```js
 <div v-for="i in items">
