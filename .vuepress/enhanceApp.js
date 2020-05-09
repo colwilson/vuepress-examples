@@ -25,7 +25,7 @@ export default ({
         Vue.use(VueTypedJs)
         
         Vue.use(VueGtm, {
-            id: 'GTM-KL5PBFJ',
+            id: 'GTM-58B6CHF',
             enabled: true,
             debug: true,
             vueRouter: router
