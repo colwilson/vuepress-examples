@@ -20,7 +20,7 @@
     "axios": "0.18.1",
     "cross-var": "1.1.0",
     "express": "4.17.1",
-    "mermaid": "8.5.0",
+    "mermaid": "8.11.0",
     "semver-compare": "1.0.0",
     "sitemap": "2.2.0",
     "socket.io": "2.3.0",
