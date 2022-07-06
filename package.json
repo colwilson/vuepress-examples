@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@vuepress/plugin-google-analytics": "1.4.1",
-    "axios": "0.18.1",
+    "axios": "0.21.2",
     "cross-var": "1.1.0",
     "express": "4.17.1",
     "mermaid": "9.1.2",
