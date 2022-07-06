@@ -23,7 +23,7 @@
     "mermaid": "9.1.2",
     "semver-compare": "1.0.0",
     "sitemap": "2.2.0",
-    "socket.io": "2.3.0",
+    "socket.io": "2.4.0",
     "vue-gtm": "2.2.0",
     "vue-native-websocket": "2.0.13",
     "vue-script2": "2.1.0",
